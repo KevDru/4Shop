@@ -141,3 +141,19 @@ span.collapsing{
 		height: 24px;
 	}
 }
+.product-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+	flex-direction: row;
+	
+}
+.product-body{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.product-title{
+	display: flex;
+	justify-content: space-between;
+}

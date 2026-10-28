@@ -6,11 +6,16 @@
 			<div class="product-row no-link" href="{{ route('products.show', $product) }}">
 				<img src="{{ url($product->image ?? 'img/placeholder.jpg') }}" alt="{{ $product->title }}" class="rounded">
 				<div class="product-body">
-					<form action="{{ route('products.order', $product) }}" method="POST" data-controller="size">
-						<h5 class="product-title"><span>{{ $product->title }}</span><em>&euro;{{ $product->price }}</em></h5>
-						@unless(empty($product->description))
-							<p>{{ $product->description }}</p>
-						@endunless
+					
+						<div class= "product-tag">
+							<form action="{{ route('products.order', $product) }}" method="POST" data-controller="size">
+							<h5 class="product-title"><span>{{ $product->title }}</span><em>&euro;{{ $product->price }}</em></h5>
+						</div>	
+						<div class="tagdesc">
+							@unless(empty($product->description))
+								<p>{{ $product->description }}</p>
+							@endunless
+				
 						@if(count($product->types))
 							<select name="type" id="type" class="form-control" data-action="change->size#update" data-target="size.type">
 								@foreach($product->types as $type)

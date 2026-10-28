@@ -9,10 +9,11 @@
 				<div class="product-body">
 					<div>
 						<h5 class="product-title"><span>{{ $product->title }}</span><em>&euro;{{ $product->price }}</em></h5>
+						
 						@unless(empty($product->description))
 							<p>{{ $product->description }}</p>
 						@endunless
-					</div>
+</div>
 					<button class="btn btn-primary">Meer info &amp; bestellen</button>
 				</div>
 			</a>
